@@ -22,14 +22,14 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 console.log('********** Task 1 **********')
 
-const displayNames = [];
-zooAnimals.forEach(function(item){
-  console.log(item.animal_name);
-  console.log(item.scientific_name);
+// const displayNames = [];
+// zooAnimals.forEach(function(item){
+//   console.log(item.animal_name);
+//   console.log(item.scientific_name);
 
 
-});
-console.log(displayNames[`Name ${animal_name}, Scientific ${scientific_name}`]);
+// });
+// console.log(displayNames[`Name ${animal_name}, Scientific ${scientific_name}`]);
 
 /* Request 2: .map()
 
@@ -49,8 +49,12 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 console.log('********** Task 3 **********')
-// const lowPopulationAnimals
-// console.log(lowPopulationAnimals);
+const lowPopulationAnimals = zooAnimals.filter(function(item){
+
+  return item.population < 5;
+});
+
+console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
